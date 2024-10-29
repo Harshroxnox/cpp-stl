@@ -10,7 +10,7 @@ using namespace std;
 int main(){
     set<int> s;
 
-    // insert in BST is O(logn)
+    // insert, search and delete in BST is O(logn)
     s.insert(5);
     s.insert(5);
     s.insert(6);
