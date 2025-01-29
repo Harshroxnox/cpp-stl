@@ -1,5 +1,5 @@
 #include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 // STL vector is just dynamic array
@@ -55,5 +55,22 @@ int main(){
     v.clear();
     cout << "Size after clear: " << v.size() << endl;
     cout << "Capacity after clear: " << v.capacity() << endl;
+
+    vector<int> vec;
+    vec.push_back(5);
+    vec.push_back(4);
+    vec.push_back(4);
+    vec.push_back(3);
+    vec.push_back(2);
+    vec.push_back(8);
+    vec.push_back(4);
+
+    // returns the iterator of first occurance of element
+    cout << "First occurance of 4: " << endl;
+    cout << find(vec.begin(), vec.end(), 4) - vec.begin() << endl;
+
+    // counts the no. of occurances of given element
+    cout << "Frequency of 4:" << endl;
+    cout << count(vec.begin(), vec.end(), 4) << endl;
 
 }
