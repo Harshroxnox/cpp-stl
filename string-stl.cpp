@@ -25,8 +25,8 @@ int main(){
     s.push_back(' ');
 
     // gets added to the end of string
-    s.append("world");
     cout << "Appending world: "<< endl;
+    s.append("world");
     cout << s << endl;
 
 
@@ -81,7 +81,25 @@ int main(){
     cout << "swaping strings: " << endl;
     s.swap(str);
     cout << str << endl;
-    
+
+    // string streams
+    // Ex: suppose we have to extract {0,1,2} vector from "id0 id1 id2" string
+    string input = "id0 id1 id2";
+    cout << "Input: " << input << endl;
+    istringstream iss(input);
+    string token;
+    vector<int> ids;
+
+    while (iss >> token)
+    {
+        string num = token.substr(2, 1);
+        ids.push_back(stoi(num)); 
+    }
+    cout << "Output: ";
+    for(auto i: ids){
+        cout << i << " ";
+    }
+    cout << endl;
 
     return 0;
 }
